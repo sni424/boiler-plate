@@ -8,7 +8,7 @@ mongoose
         `mongodb+srv://sni424:abcd@cluster0.hg0w0.mongodb.net/?retryWrites=true&w=majority`
     )
     .then(() => console.log("hello"))
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(err.message));
 
 app.get("/", (req, res) => {
     res.send("Hello World!");
