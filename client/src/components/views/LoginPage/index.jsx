@@ -1,22 +1,22 @@
-import axios from 'axios';
+import axios, { Axios } from 'axios';
 import { useState } from 'react'
+import {useDispatch} from `react-redux`;
 
 const LoginPage = () => {
+  const dispatch = useDispatch();
 
   const [Email,setEmail] = useState("");
   const [Password,setPassword] = useState("");
 
   const onSubmitHandler = (e)=>{
-e.preventDefault();
-axios({
-  method: 'POST',
-  url: '/api/users/login',
-  data: {
-    email: Email,
-    password: Password
+  e.preventDefault();
+  let body = {email: Email,password: Password}
+  // dispatch(loginUser(body))
+Axios.post('/api/users/login',body).then(res=>{
+    res.data
+  })
   }
-});
-  }
+
 
   return (
     <div style={{display:"flex", justifyContent:'center',alignItems:"center"
