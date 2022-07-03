@@ -48,7 +48,6 @@ const RegisterPage = () => {
             setEmail(e.target.value);
           }}
         />
-
         <label>Name</label>
         <input
           type="text"
@@ -57,7 +56,6 @@ const RegisterPage = () => {
             setName(e.target.value);
           }}
         />
-
         <label>Password</label>
         <input
           type="Password"
@@ -66,7 +64,6 @@ const RegisterPage = () => {
             setPassword(e.target.value);
           }}
         />
-
         <label>Confirm Password</label>
         <input
           type="password"
